@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{10C356BD-7878-4FF6-A32D-9CC12D8E7152}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EmprezaZ.Dynamics356.Plugins.Cep</RootNamespace>
+    <AssemblyName>EmprezaZ.Dynamics356.Plugins.Cep</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>EmpresaZ.Dynamics365.Plugins.Cep.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.6.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Crm.Sdk.Proxy, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CrmSdk.CoreAssemblies.9.0.2.52\lib\net462\Microsoft.Crm.Sdk.Proxy.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Clients.ActiveDirectory, Version=3.19.8.16603, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Clients.ActiveDirectory.3.19.8\lib\net45\Microsoft.IdentityModel.Clients.ActiveDirectory.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Clients.ActiveDirectory.Platform, Version=3.19.8.16603, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Clients.ActiveDirectory.3.19.8\lib\net45\Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Rest.ClientRuntime, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CrmSdk.XrmTooling.CoreAssembly.9.1.1.45\lib\net462\Microsoft.Rest.ClientRuntime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xrm.Sdk, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CrmSdk.CoreAssemblies.9.0.2.52\lib\net462\Microsoft.Xrm.Sdk.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xrm.Sdk.Deployment, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CrmSdk.Deployment.9.0.2.34\lib\net462\Microsoft.Xrm.Sdk.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xrm.Sdk.Workflow, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CrmSdk.Workflow.9.0.2.42\lib\net462\Microsoft.Xrm.Sdk.Workflow.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xrm.Tooling.Connector, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CrmSdk.XrmTooling.CoreAssembly.9.1.1.45\lib\net462\Microsoft.Xrm.Tooling.Connector.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Activities" />
+    <Reference Include="System.Activities.Presentation" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.DirectoryServices.AccountManagement" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Text.Encodings.Web, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.6.0.0\lib\net461\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=6.0.0.7, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.6.0.7\lib\net461\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Workflow.Activities" />
+    <Reference Include="System.Workflow.ComponentModel" />
+    <Reference Include="System.Workflow.Runtime" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CepPlugin.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="WebResources\.history\cep_20240226153116.js" />
+    <Content Include="WebResources\.history\cep_20240226153119.js" />
+    <Content Include="WebResources\.history\cep_20240226153123.js" />
+    <Content Include="WebResources\.history\cep_20240226153125.js" />
+    <Content Include="WebResources\.history\cep_20240226153126.js" />
+    <Content Include="WebResources\.history\cep_20240226153131.js" />
+    <Content Include="WebResources\.history\cep_20240226153143.js" />
+    <Content Include="WebResources\.history\cep_20240226153149.js" />
+    <Content Include="WebResources\.history\cep_20240226153157.js" />
+    <Content Include="WebResources\.history\cep_20240226153159.js" />
+    <Content Include="WebResources\.history\cep_20240226153318.js" />
+    <Content Include="WebResources\.history\cep_20240226153322.js" />
+    <Content Include="WebResources\.history\cep_20240226153514.js" />
+    <Content Include="WebResources\.history\cep_20240226153527.js" />
+    <Content Include="WebResources\.history\cep_20240226153529.js" />
+    <Content Include="WebResources\.history\cep_20240226153530.js" />
+    <Content Include="WebResources\.history\cep_20240226153546.js" />
+    <Content Include="WebResources\.history\cep_20240226153548.js" />
+    <Content Include="WebResources\.history\cep_20240226153550.js" />
+    <Content Include="WebResources\.history\cep_20240226153552.js" />
+    <Content Include="WebResources\.history\cep_20240226153640.js" />
+    <Content Include="WebResources\.history\cep_20240226153647.js" />
+    <Content Include="WebResources\.history\cep_20240226153707.js" />
+    <Content Include="WebResources\.history\cep_20240226153709.js" />
+    <Content Include="WebResources\.history\cep_20240226153713.js" />
+    <Content Include="WebResources\.history\cep_20240226153715.js" />
+    <Content Include="WebResources\.history\cep_20240226153927.js" />
+    <Content Include="WebResources\.history\cep_20240226153931.js" />
+    <Content Include="WebResources\.history\cep_20240226153934.js" />
+    <Content Include="WebResources\.history\cep_20240226153936.js" />
+    <Content Include="WebResources\.history\cep_20240226153944.js" />
+    <Content Include="WebResources\.history\cep_20240226153946.js" />
+    <Content Include="WebResources\.history\cep_20240226153948.js" />
+    <Content Include="WebResources\.history\cep_20240226153950.js" />
+    <Content Include="WebResources\.history\cep_20240226154029.js" />
+    <Content Include="WebResources\.history\ConsultaCEP_20240225230407.js" />
+    <Content Include="WebResources\.history\ConsultaCEP_20240226154121.js" />
+    <Content Include="WebResources\.history\ConsultaCEP_20240226154145.js" />
+    <Content Include="WebResources\.history\ConsultaCEP_20240226154149.js" />
+    <Content Include="WebResources\.history\ConsultaCEP_20240226154151.js" />
+    <Content Include="WebResources\.history\ConsultaCEP_20240226154152.js" />
+    <Content Include="WebResources\.history\ConsultaCEP_20240226154346.js" />
+    <Content Include="WebResources\.history\ConsultaCEP_20240226154731.js" />
+    <Content Include="WebResources\.history\ConsultaCEP_20240226154737.js" />
+    <Content Include="WebResources\.history\ConsultaCEP_20240226154739.js" />
+    <Content Include="WebResources\.history\ConsultaCEP_20240226154914.js" />
+    <Content Include="WebResources\.history\ConsultaCEP_20240226155211.js" />
+    <Content Include="WebResources\.history\ConsultaCEP_20240226155358.js" />
+    <Content Include="WebResources\.history\ConsultaCEP_20240226155423.js" />
+    <Content Include="WebResources\.history\ConsultaCEP_20240226155818.js" />
+    <Content Include="WebResources\.history\ConsultaCEP_20240226155825.js" />
+    <Content Include="WebResources\.history\ConsultaCEP_20240226155835.js" />
+    <Content Include="WebResources\.history\ConsultaCEP_20240226161341.js" />
+    <Content Include="WebResources\.history\ConsultaCEP_20240226161346.js" />
+    <Content Include="WebResources\.history\ConsultaCEP_20240226161353.js" />
+    <Content Include="WebResources\.history\ConsultaCEP_20240226161357.js" />
+    <Content Include="WebResources\.history\ConsultaCEP_20240226161358.js" />
+    <Content Include="WebResources\.history\ConsultaCEP_20240226163028.js" />
+    <Content Include="WebResources\.history\ConsultaCEP_20240226163037.js" />
+    <Content Include="WebResources\.history\ConsultaCEP_20240226163040.js" />
+    <Content Include="WebResources\.history\ConsultaCEP_20240226163601.js" />
+    <Content Include="WebResources\.history\ConsultaCEP_20240226163608.js" />
+    <Content Include="WebResources\.history\ConsultaCEP_20240226163620.js" />
+    <Content Include="WebResources\.history\ConsultaCEP_20240226163625.js" />
+    <Content Include="WebResources\.history\ConsultaCEP_20240226163629.js" />
+    <Content Include="WebResources\.history\ConsultaCEP_20240226163637.js" />
+    <Content Include="WebResources\.history\ConsultaCEP_20240226163640.js" />
+    <Content Include="WebResources\.history\ConsultaCEP_20240226163643.js" />
+    <Content Include="WebResources\.history\ConsultaCEP_20240226163758.js" />
+    <Content Include="WebResources\.history\ConsultaCEP_20240226163759.js" />
+    <Content Include="WebResources\.history\ConsultaCEP_20240226163800.js" />
+    <Content Include="WebResources\.history\ConsultaCEP_20240226163835.js" />
+    <Content Include="WebResources\.history\index_20240226153726.html" />
+    <Content Include="WebResources\.history\index_20240226153732.html" />
+    <Content Include="WebResources\.history\index_20240226153734.html" />
+    <Content Include="WebResources\.history\index_20240226153736.html" />
+    <Content Include="WebResources\.history\index_20240226153741.html" />
+    <Content Include="WebResources\.history\index_20240226153743.html" />
+    <Content Include="WebResources\.history\index_20240226153745.html" />
+    <Content Include="WebResources\.history\index_20240226153747.html" />
+    <Content Include="WebResources\.history\index_20240226153748.html" />
+    <Content Include="WebResources\.history\index_20240226153752.html" />
+    <Content Include="WebResources\.history\index_20240226153754.html" />
+    <Content Include="WebResources\.history\index_20240226153803.html" />
+    <Content Include="WebResources\.history\index_20240226153805.html" />
+    <Content Include="WebResources\cep.js" />
+    <Content Include="WebResources\ConsultaCEP.js" />
+    <Content Include="WebResources\EmpresaY.Dynamics365.Conta.js" />
+    <Content Include="WebResources\EmpresaY.Dynamics365.Util.js" />
+    <Content Include="WebResources\index.html" />
+    <Content Include="WebResources\org9a10be3e.api.crm2.dynamics.com\longurls\main.aspx%25-330ee5d7.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="EmpresaZ.Dynamics365.Plugins.Cep.snk" />
+    <None Include="packages.config" />
+    <None Include="WebResources\org9a10be3e.api.crm2.dynamics.com\%25257b638443360800000156%25257d\webresources\alf_consulta_cep" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
